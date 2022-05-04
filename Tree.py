@@ -96,5 +96,6 @@ BSTree.levelPrint()
 print(BSTree.root.preTraversePrint())
 print(BSTree.root.inTraversePrint())
 print(BSTree.root.postTraversePrint())
+######
 
             
