@@ -84,18 +84,18 @@ class BinarySearchTree(object):
 # Node3.left = Node1
 # Node8.right = Node10
 # print(Node8.levelOrderTraverse())
-BSTree = BinarySearchTree()
-BSTree.insert(5)
-BSTree.insert(8)
-BSTree.insert(2)
-BSTree.insert(1)
-BSTree.insert(9)
-BSTree.insert(4)
+#BSTree = BinarySearchTree()
+#BSTree.insert(5)
+#BSTree.insert(8)
+#BSTree.insert(2)
+#BSTree.insert(1)
+#BSTree.insert(9)
+#BSTree.insert(4)
 
-BSTree.levelPrint()
-print(BSTree.root.preTraversePrint())
-print(BSTree.root.inTraversePrint())
-print(BSTree.root.postTraversePrint())
-#hi zora
+#BSTree.levelPrint()
+#print(BSTree.root.preTraversePrint())
+#print(BSTree.root.inTraversePrint())
+#print(BSTree.root.postTraversePrint())
+
 
             
