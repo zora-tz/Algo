@@ -4,54 +4,6 @@ from Tree import TreeNode
 # Use recursion
 # return whether root is a BST
 
-# def checkTreeValues(node):
-#     rootval = node.val
-#     if node.left is not None:
-#         if node.left.val > rootval:
-#             return False
-#         checkTreeValues(node.left)
-    
-
-# def isBST(root):
-#     if root.left is not None:      
-#         if len([filter(lambda x: x > root.val, root.left.preTraversePrint())]) > 0:
-#             print(root.left.preTraversePrint())
-#             print([filter(lambda x: x > root.val, root.left.preTraversePrint())])
-#             return False
-#         isBST(root.left)
-#     if root.right is not None:
-#         if len([filter(lambda x: x < root.val, root.right.preTraversePrint())]) > 0:
-#             print(root.right.preTraversePrint())
-#             print([filter(lambda x: x < root.val, root.right.preTraversePrint())])
-#             return False
-#         isBST(root.right)
-#     return True
-
-# def isBST(root):
-#     print(root.val)
-#     if root.left is not None:
-#         if len(list(x for x in root.left.preTraversePrint() if x > root.val)) > 0:
-#             print("left branch")
-#             print(root.left.preTraversePrint())
-#             print("eval")
-#             print(list(x for x in root.left.preTraversePrint() if x > root.val))
-#             print(len(list(x for x in root.left.preTraversePrint() if x > root.val)))
-#             print("f")
-#             return False
-#         isBST(root.left)
-#     if root.right is not None:
-#         if len(list(x for x in root.right.preTraversePrint() if x < root.val)) > 0:
-#             print("right branch")
-#             print(root.right.preTraversePrint())
-#             print("eval")
-#             print(list(x for x in root.right.preTraversePrint() if x < root.val))
-#             print(len(list(x for x in root.right.preTraversePrint() if x < root.val)))
-#             return False
-#         isBST(root.right)
-#     #print('t')
-#     else:
-#         return True
-
 def isBSThelper(root):
     output = 0
     if root.left is not None:
@@ -69,17 +21,6 @@ def isBST(root):
         return True
     else:
         return False
-
-# def isBST(root):
-#     if root.left is not None:
-#         if len(list(x for x in root.left.preTraversePrint() if x > root.val)) > 0:
-#             return False
-#         isBST(root.left)
-#     if root.right is not None:
-#         if len(list(x for x in root.right.preTraversePrint() if x < root.val)) > 0:
-#             return False
-#         isBST(root.right)
-#     return True
 
 
 root1 = TreeNode(2)
