@@ -91,12 +91,12 @@ class Linkedlist(object):
         
         
             
-list = Linkedlist()
-list.insert(1)
-list.insert(2)
-list.insert(3)
-list.insert(4)
-list.print()
-print(list.lengthR())
+# list = Linkedlist()
+# list.insert(1)
+# list.insert(2)
+# list.insert(3)
+# list.insert(4)
+# list.print()
+# print(list.lengthR())
 #list.removeIndex(5)
 #list.print()
