@@ -23,7 +23,24 @@ def binarySearch(array, element):
             print(last)
             return first, last
         
-
-
-array = [0,1,1]
-binarySearch(array, 1)
+def binarySearchV2(array, element):
+    left = 0
+    right = len(array)-1
+    while left != right:
+        midIndex = int((right - left)/2) + left
+        if array[midIndex] > element:
+            right = midIndex - 1
+        if array[midIndex] < element: 
+            left = midIndex + 1
+        
+        if array[midIndex] == element:
+            right = midIndex
+    
+    if array[left] == element:
+        return left
+    else:
+        return -1
+    
+array = [0, 1, 1, 3, 6, 11]
+index = binarySearchV2(array, 2)
+print(index)
