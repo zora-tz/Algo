@@ -3,4 +3,27 @@
 #find first and last appearance
 
 def binarySearch(array, element):
-    return
+    left = 0
+    right = len(array)-1
+    while left != right:
+        midIndex = int((right - left)/2) + left
+        if array[midIndex] > element:
+            right = midIndex - 1
+        if array[midIndex] < element: 
+            left = midIndex + 1
+        
+        if array[midIndex] == element:
+            first = midIndex
+            last = midIndex
+            while first-1 >= 0 and array[first-1] == element:
+                first -= 1
+            while last+1 < len(array) and array[last+1] == element:
+                last += 1
+            print(first)
+            print(last)
+            return first, last
+        
+
+
+array = [0,1,1]
+binarySearch(array, 1)

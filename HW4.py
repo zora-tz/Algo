@@ -1,10 +1,64 @@
 from ListNode import Linkedlist
 from ListNode import ListNode
 
-#merge sort a linked list
+# merge sort a linked list
+
 def mergeSort(head):
-    
-    return head
+    if head.next is None:
+        return head
+    firsthead = head
+    secondhead = midNode(head).next
+    midNode(head).next = None
+    head1 = mergeSort(firsthead)
+    head2 = mergeSort(secondhead)
+
+    if head1.val>head2.val:
+        sortedHead = head2
+        head2 = head2.next
+    if head1.val<head2.val:
+        sortedHead = head1
+        head1 = head1.next
+    current = sortedHead
+    while not (head1 is None and head2 is None):
+        if head1.next is None:
+            current.next= head2
+            break
+        if head2.next is None:
+            current.next = head1
+            break
+        if head1.val>head2.val:
+            current.next = head2
+            current = current.next
+            head2 = head2.next
+        if head1.val<head2.val:
+            current.next = head1
+            current = current.next
+            head1 = head1.next
+            
+    return sortedHead
+
+# def index(head, i):
+#     current = head
+#     for n in range(i):
+#         current = current.next
+#     return current
+
+def midNode(head):
+    current = head
+    i = 1
+    while i < int(length(head)/2):
+        current = current.next
+        i += 1
+    return current
+        
+def length(head):
+    length = 0
+    current = head
+    while current != None:
+        length += 1
+        current = current.next
+    return length
+
 
 head = ListNode(55)
 node4 = ListNode(4)
@@ -23,4 +77,7 @@ node3.next = node200
 node200.next = node100
 node100.next = node2
 
+# print(length(head))
+# print(midNode(head).val)
 listSorted = mergeSort(head)
+
