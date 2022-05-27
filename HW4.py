@@ -4,6 +4,8 @@ from ListNode import ListNode
 # merge sort a linked list
 
 def mergeSort(head):
+    if head is None:
+        return head
     if head.next is None:
         return head
     firsthead = head
@@ -15,26 +17,26 @@ def mergeSort(head):
     if head1.val>head2.val:
         sortedHead = head2
         head2 = head2.next
-    if head1.val<head2.val:
+    else:
         sortedHead = head1
         head1 = head1.next
     current = sortedHead
-    while not (head1 is None and head2 is None):
-        if head1.next is None:
-            current.next= head2
-            break
-        if head2.next is None:
-            current.next = head1
-            break
-        if head1.val>head2.val:
+    
+    while head1 is not None and head2 is not None:
+        if head1.val > head2.val:
             current.next = head2
             current = current.next
             head2 = head2.next
-        if head1.val<head2.val:
+        else:
             current.next = head1
             current = current.next
             head1 = head1.next
-            
+    
+    if head2 is None:
+        current.next = head1
+    else:
+        current.next = head2
+    
     return sortedHead
 
 # def index(head, i):
@@ -80,4 +82,13 @@ node100.next = node2
 # print(length(head))
 # print(midNode(head).val)
 listSorted = mergeSort(head)
+while listSorted is not None:
+    print(listSorted.val)
+    listSorted = listSorted.next
+    
+    
+    
+    
+    
+    
 
