@@ -97,5 +97,16 @@ class BinarySearchTree(object):
 #print(BSTree.root.inTraversePrint())
 #print(BSTree.root.postTraversePrint())
 
+#    5
+#  2   6
+#1   3
+#  2.5
+
+#in order: left self right
+#stack [5 2 1]
+#print 
+
+
+
 
             
